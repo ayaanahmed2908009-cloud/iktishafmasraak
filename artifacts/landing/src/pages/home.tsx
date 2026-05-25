@@ -14,8 +14,6 @@ export default function Home() {
         className="absolute inset-0 w-full h-full object-cover object-top opacity-95"
       />
 
-      {/* Dark gradient overlay for CTA contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/60 md:bg-none" />
 
       {/* Mobile-only: program name strip at the top */}
       <img
