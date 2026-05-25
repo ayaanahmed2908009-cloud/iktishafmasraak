@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface SurveyInput {
   /** @minLength 1 */
@@ -23,19 +20,3 @@ export interface SurveyInput {
   /** @minLength 1 */
   school: string;
 }
-
-export interface SurveyResponse {
-  id: number;
-  name: string;
-  phone: string;
-  email: string;
-  grade: string;
-  city: string;
-  school: string;
-  createdAt: string;
-}
-
-export type ListResponsesParams = {
-password: string;
-};
-
