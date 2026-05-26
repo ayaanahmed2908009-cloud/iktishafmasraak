@@ -11,7 +11,7 @@ export default function Home() {
       <img
         src={coverImage}
         alt="Cover"
-        className="absolute inset-0 w-full h-full object-cover object-top opacity-95"
+        className="absolute inset-0 w-full h-full object-cover object-top opacity-95 md:object-contain md:object-center"
       />
 
 
