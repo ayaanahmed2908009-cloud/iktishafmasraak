@@ -7,7 +7,15 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="relative min-h-[100dvh] w-full flex flex-col items-center bg-black overflow-hidden">
-      {/* Background cover image (cropped to fill) */}
+      {/* Desktop only: blurred backdrop that extends the cover's color to fill the sides */}
+      <img
+        src={coverImage}
+        alt=""
+        aria-hidden
+        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90"
+      />
+
+      {/* Main cover image */}
       <img
         src={coverImage}
         alt="Cover"
