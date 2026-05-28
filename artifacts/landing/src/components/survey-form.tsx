@@ -63,6 +63,7 @@ export function SurveyForm({
       {
         onSuccess: () => {
           setIsSubmitted(true);
+          onSuccessAction?.();
         },
         onError: (err: any) => {
           toast.error("حدث خطأ أثناء إرسال البيانات. يرجى المحاولة مرة أخرى.");

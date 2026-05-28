@@ -14,7 +14,7 @@ export default function SurveyPage() {
 
           <SurveyForm 
             theme="light" 
-            onSuccessAction={() => window.location.href = "/"}
+            onSuccessAction={() => window.location.href = "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/"}
             successButtonLabel="العودة للصفحة الرئيسية"
           />
         </div>
