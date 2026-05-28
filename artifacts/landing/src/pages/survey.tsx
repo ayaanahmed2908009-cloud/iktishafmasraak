@@ -12,11 +12,7 @@ export default function SurveyPage() {
           <h1 className="text-3xl font-bold text-[#FEF7EB] mb-2">نموذج التسجيل</h1>
           <p className="text-[#A89886] mb-8">يرجى تعبئة البيانات التالية للتسجيل.</p>
 
-          <SurveyForm 
-            theme="light" 
-            onSuccessAction={() => window.location.href = "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/"}
-            successButtonLabel="العودة للصفحة الرئيسية"
-          />
+          <SurveyForm theme="light" />
         </div>
       </div>
     </div>

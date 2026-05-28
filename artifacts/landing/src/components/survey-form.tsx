@@ -63,7 +63,7 @@ export function SurveyForm({
       {
         onSuccess: () => {
           setIsSubmitted(true);
-          onSuccessAction?.();
+          window.open("https://hub.misk.org.sa/ar/programs/skills/discover-your-path/", "_blank", "noopener,noreferrer");
         },
         onError: (err: any) => {
           toast.error("حدث خطأ أثناء إرسال البيانات. يرجى المحاولة مرة أخرى.");
