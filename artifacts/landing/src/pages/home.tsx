@@ -61,13 +61,19 @@ export default function Home() {
         />
         {/* Soft dark overlay for legibility of title + logos */}
         <div className="md:hidden absolute inset-0 bg-black/25" />
-        {/* Title in the middle */}
+        {/* Title in the middle (glowing white text) */}
         <div className="md:hidden absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 px-6 flex justify-center pointer-events-none">
-          <img
-            src={titleStrip}
-            alt="اكتشف مسارك"
-            className="w-[75%] max-w-xs h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]"
-          />
+          <h1
+            dir="rtl"
+            className="text-white text-6xl font-black tracking-tight text-center leading-[1.1]"
+            style={{
+              fontFamily: "Tajawal, sans-serif",
+              textShadow:
+                "0 0 12px rgba(255,255,255,0.85), 0 0 30px rgba(255,255,255,0.55), 0 0 60px rgba(255,255,255,0.35), 0 4px 24px rgba(0,0,0,0.6)",
+            }}
+          >
+            اكتشف مسارك
+          </h1>
         </div>
         {/* Logos in bottom corners */}
         <img
