@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const MISK_PORTAL_URL = "https://misk.org.sa";
+const MISK_PORTAL_URL = "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/";
 
 export default function Home() {
   const scrollToSection = (id: string) => {
