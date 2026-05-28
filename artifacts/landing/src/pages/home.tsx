@@ -2,6 +2,9 @@ import { Link } from "wouter";
 import coverImage from "@/assets/cover.png";
 import logosStrip from "@/assets/logos-strip.png";
 import titleStrip from "@/assets/title-strip.png";
+import photoOnly from "@/assets/photo-only.png";
+import logoMisk from "@/assets/logo-misk.png";
+import logoNahj from "@/assets/logo-nahj.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { 
@@ -32,32 +35,54 @@ export default function Home() {
   return (
     <div className="min-h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] text-white overflow-hidden font-sans" style={{ fontFamily: "Tajawal, sans-serif" }}>
       
-      {/* 1. HERO SECTION (Exactly preserved from previous, but with relative wrapping) */}
-      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-black overflow-hidden shrink-0">
-        {/* Desktop only: blurred backdrop that extends the cover's color to fill the sides */}
+      {/* 1. HERO SECTION */}
+      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] overflow-hidden shrink-0">
+        {/* ===== DESKTOP / TABLET (md+) ===== */}
+        {/* Blurred backdrop to extend cover edges */}
         <img
           src={coverImage}
           alt=""
           aria-hidden
           className="hidden md:block absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90"
         />
-
         {/* Main cover image */}
         <img
           src={coverImage}
           alt="Cover"
-          className="absolute inset-0 w-full h-full object-cover object-top opacity-95 md:object-contain md:object-center"
+          className="hidden md:block absolute inset-0 w-full h-full object-contain object-center opacity-95"
         />
 
-        {/* Mobile-only: program name strip at the top */}
+        {/* ===== MOBILE (default) ===== */}
+        {/* Photo as the natural background */}
         <img
-          src={titleStrip}
-          alt="اكتشف مسارك"
-          className="md:hidden absolute inset-x-0 top-0 w-full h-auto z-20 pointer-events-none"
+          src={photoOnly}
+          alt="Cover"
+          className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Soft dark overlay for legibility of title + logos */}
+        <div className="md:hidden absolute inset-0 bg-black/25" />
+        {/* Title in the middle */}
+        <div className="md:hidden absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 px-6 flex justify-center pointer-events-none">
+          <img
+            src={titleStrip}
+            alt="اكتشف مسارك"
+            className="w-[75%] max-w-xs h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]"
+          />
+        </div>
+        {/* Logos in bottom corners */}
+        <img
+          src={logoMisk}
+          alt="Misk"
+          className="md:hidden absolute bottom-5 left-4 w-[42%] max-w-[200px] h-auto z-20 pointer-events-none drop-shadow-lg"
+        />
+        <img
+          src={logoNahj}
+          alt="NAHJ"
+          className="md:hidden absolute bottom-5 right-4 w-[42%] max-w-[200px] h-auto z-20 pointer-events-none drop-shadow-lg"
         />
 
-        {/* CTA — centered on mobile, near bottom on desktop */}
-        <div className="relative z-30 flex flex-1 items-center md:items-end justify-center h-[100dvh] w-full pb-0 md:pb-24 px-4">
+        {/* CTA — centered on mobile (slightly above logos), near bottom on desktop */}
+        <div className="relative z-30 flex flex-1 items-end md:items-end justify-center h-[100dvh] w-full pb-32 md:pb-24 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,19 +91,12 @@ export default function Home() {
           >
             <button
               onClick={() => scrollToSection('questionary')}
-              className="inline-flex h-14 sm:h-14 items-center justify-center rounded-full bg-yellow-400 px-12 sm:px-12 text-xl sm:text-xl font-bold text-black shadow-[0_0_40px_-10px_rgba(250,204,21,0.5)] transition-all hover:bg-yellow-300 hover:scale-105 hover:shadow-[0_0_50px_-5px_rgba(250,204,21,0.6)] focus:outline-none focus:ring-4 focus:ring-yellow-400/50 cursor-pointer"
+              className="inline-flex h-14 items-center justify-center rounded-full bg-yellow-400 px-12 text-xl font-bold text-black shadow-[0_0_40px_-10px_rgba(250,204,21,0.5)] transition-all hover:bg-yellow-300 hover:scale-105 hover:shadow-[0_0_50px_-5px_rgba(250,204,21,0.6)] focus:outline-none focus:ring-4 focus:ring-yellow-400/50 cursor-pointer"
             >
               سجّل الآن
             </button>
           </motion.div>
         </div>
-
-        {/* Mobile-only: logos strip pinned at the bottom */}
-        <img
-          src={logosStrip}
-          alt="Sponsors"
-          className="md:hidden absolute inset-x-0 bottom-0 w-full h-auto z-20 pointer-events-none"
-        />
       </div>
 
       {/* 2. PROGRAM SUMMARY SECTION */}
