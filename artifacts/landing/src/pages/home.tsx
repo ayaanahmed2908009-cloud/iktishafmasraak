@@ -143,8 +143,8 @@ export default function Home() {
         aria-label="مقدّم لكم من"
         className="w-full bg-[#E8DCC8] py-14 sm:py-20"
       >
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Arabic text on the left */}
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
+          {/* Arabic text on the right */}
           <div dir="rtl" className="text-center md:text-right shrink-0">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1f3a5f] leading-tight">
               مقدّم لكم من
