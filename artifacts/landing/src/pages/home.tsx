@@ -5,6 +5,8 @@ import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
 import logoMisk from "@/assets/logo-misk.png";
 import logoNahj from "@/assets/logo-nahj.png";
+import heroMisk from "@/assets/hero-misk.png";
+import heroNahj from "@/assets/hero-nahj.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
@@ -55,6 +57,26 @@ export default function Home() {
           />
           {/* Soft dark overlay for legibility of the centered title */}
           <div className="absolute inset-0 bg-black/30" />
+          {/* Partner logos — top corners inside the peninsula */}
+          <div
+            dir="rtl"
+            className="absolute top-8 lg:top-10 inset-x-8 lg:inset-x-12 z-20 flex items-center justify-between pointer-events-none"
+          >
+            <div className="rounded-2xl bg-white/95 backdrop-blur-sm px-5 py-3 shadow-lg ring-1 ring-black/5">
+              <img
+                src={heroNahj}
+                alt="نهج"
+                className="h-10 lg:h-12 w-auto object-contain"
+              />
+            </div>
+            <div className="rounded-2xl bg-white/95 backdrop-blur-sm px-5 py-3 shadow-lg ring-1 ring-black/5">
+              <img
+                src={heroMisk}
+                alt="مؤسسة محمد بن سلمان — مسك"
+                className="h-10 lg:h-12 w-auto object-contain"
+              />
+            </div>
+          </div>
           {/* Centered title + subtitle */}
           <div dir="rtl" className="absolute inset-0 z-20 flex flex-col items-center justify-center pb-28 lg:pb-36 px-8 text-center pointer-events-none">
             <p
