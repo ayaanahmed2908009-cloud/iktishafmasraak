@@ -57,14 +57,15 @@ export default function Home() {
         <div className="hidden md:flex absolute inset-0 z-20 items-center justify-center px-8 pointer-events-none">
           <h1
             dir="rtl"
-            className="text-white font-black tracking-tight text-center leading-[1.05] text-8xl lg:text-9xl"
+            className="text-white font-normal tracking-tight text-center leading-[1.05] text-8xl lg:text-9xl"
             style={{
               fontFamily: "Tajawal, sans-serif",
               textShadow:
                 "0 0 16px rgba(255,255,255,0.55), 0 0 40px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.7)",
             }}
           >
-            اكتشف مسارك
+            <span className="block">اكتشف</span>
+            <span className="block">مسارك</span>
           </h1>
         </div>
 
