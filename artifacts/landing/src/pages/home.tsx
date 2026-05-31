@@ -49,7 +49,7 @@ export default function Home() {
         <img
           src={coverImage}
           alt="Cover"
-          className="hidden md:block absolute inset-0 w-full h-full object-contain object-center opacity-95"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
         />
 
         {/* ===== MOBILE (default) ===== */}
