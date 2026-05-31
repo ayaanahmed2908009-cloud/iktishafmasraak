@@ -36,37 +36,39 @@ export default function Home() {
     <div className="min-h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] text-white overflow-hidden font-sans" style={{ fontFamily: "Tajawal, sans-serif" }}>
       
       {/* 1. HERO SECTION */}
-      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] overflow-hidden shrink-0">
-        {/* ===== DESKTOP / TABLET (md+) ===== */}
-        {/* Blurred backdrop to extend cover edges */}
-        <img
-          src={coverImage}
-          alt=""
-          aria-hidden
-          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90"
-        />
-        {/* Main cover image */}
-        <img
-          src={coverImage}
-          alt="Cover"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
-        />
-        {/* Soft dark overlay for legibility of the centered title (desktop) */}
-        <div className="hidden md:block absolute inset-0 bg-black/30" />
-        {/* Centered title (desktop) */}
-        <div className="hidden md:flex absolute inset-0 z-20 items-center justify-center px-8 pointer-events-none">
-          <h1
-            dir="rtl"
-            className="text-white tracking-tight text-center leading-[1.05] text-8xl lg:text-9xl"
-            style={{
-              fontFamily: "Cairo, sans-serif",
-              fontWeight: 700,
-              textShadow: "0 4px 20px rgba(0,0,0,0.5)",
-            }}
-          >
-            <span className="block">اكتشف</span>
-            <span className="block">مسارك</span>
-          </h1>
+      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] md:bg-white overflow-hidden shrink-0">
+        {/* ===== DESKTOP / TABLET (md+) — rounded peninsula surrounded by white ===== */}
+        <div className="hidden md:block absolute inset-6 lg:inset-10 rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
+          {/* Blurred backdrop to extend cover edges */}
+          <img
+            src={coverImage}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-2xl opacity-90"
+          />
+          {/* Main cover image */}
+          <img
+            src={coverImage}
+            alt="Cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Soft dark overlay for legibility of the centered title */}
+          <div className="absolute inset-0 bg-black/30" />
+          {/* Centered title */}
+          <div className="absolute inset-0 z-20 flex items-center justify-center px-8 pointer-events-none">
+            <h1
+              dir="rtl"
+              className="text-white tracking-tight text-center leading-[1.05] text-8xl lg:text-9xl"
+              style={{
+                fontFamily: "Cairo, sans-serif",
+                fontWeight: 700,
+                textShadow: "0 4px 20px rgba(0,0,0,0.5)",
+              }}
+            >
+              <span className="block">اكتشف</span>
+              <span className="block">مسارك</span>
+            </h1>
+          </div>
         </div>
 
         {/* ===== MOBILE (default) ===== */}
