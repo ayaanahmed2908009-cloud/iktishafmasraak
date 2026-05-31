@@ -247,3 +247,17 @@
     inset: -1px;
   }
 }
+@keyframes partners-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-partners-marquee {
+  animation: partners-marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-partners-marquee {
+    animation: none;
+  }
+}

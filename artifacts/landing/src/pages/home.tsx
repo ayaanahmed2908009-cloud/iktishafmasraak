@@ -7,6 +7,7 @@ import logoMisk from "@/assets/logo-misk.png";
 import logoNahj from "@/assets/logo-nahj.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
+import { PartnersCarousel } from "@/components/partners-carousel";
 import { 
   Compass, 
   GraduationCap, 
@@ -134,6 +135,9 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
+
+      {/* PARTNERS CAROUSEL */}
+      <PartnersCarousel />
 
       {/* 2. PROGRAM SUMMARY SECTION */}
       <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6 flex flex-col items-center">
