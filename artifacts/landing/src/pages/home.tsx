@@ -51,6 +51,22 @@ export default function Home() {
           alt="Cover"
           className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
         />
+        {/* Soft dark overlay for legibility of the centered title (desktop) */}
+        <div className="hidden md:block absolute inset-0 bg-black/30" />
+        {/* Centered title (desktop) */}
+        <div className="hidden md:flex absolute inset-0 z-20 items-center justify-center px-8 pointer-events-none">
+          <h1
+            dir="rtl"
+            className="text-white font-black tracking-tight text-center leading-[1.05] text-8xl lg:text-9xl"
+            style={{
+              fontFamily: "Tajawal, sans-serif",
+              textShadow:
+                "0 0 16px rgba(255,255,255,0.55), 0 0 40px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.7)",
+            }}
+          >
+            اكتشف مسارك
+          </h1>
+        </div>
 
         {/* ===== MOBILE (default) ===== */}
         {/* Photo as the natural background */}
