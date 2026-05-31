@@ -61,8 +61,7 @@ export default function Home() {
             style={{
               fontFamily: "Cairo, sans-serif",
               fontWeight: 700,
-              textShadow:
-                "0 0 16px rgba(255,255,255,0.55), 0 0 40px rgba(255,255,255,0.35), 0 6px 30px rgba(0,0,0,0.7)",
+              textShadow: "0 4px 20px rgba(0,0,0,0.5)",
             }}
           >
             <span className="block">اكتشف</span>
