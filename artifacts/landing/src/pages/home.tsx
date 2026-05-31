@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import coverImage from "@/assets/cover.png";
+import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
 import logosStrip from "@/assets/logos-strip.png";
 import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
