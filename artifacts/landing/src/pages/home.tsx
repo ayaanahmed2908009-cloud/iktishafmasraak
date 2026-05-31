@@ -55,15 +55,15 @@ export default function Home() {
           {/* Soft dark overlay for legibility of the centered title */}
           <div className="absolute inset-0 bg-black/30" />
           {/* Centered title + subtitle */}
-          <div dir="rtl" className="absolute inset-0 z-20 flex flex-col items-center justify-center px-8 text-center pointer-events-none">
+          <div dir="rtl" className="absolute inset-0 z-20 flex flex-col items-center justify-center pb-28 lg:pb-36 px-8 text-center pointer-events-none">
             <p
-              className="text-white/85 text-base lg:text-lg font-medium tracking-wide mb-4"
+              className="text-white/85 text-base lg:text-lg font-medium tracking-wide mb-5"
               style={{ fontFamily: "Tajawal, sans-serif", textShadow: "0 2px 10px rgba(0,0,0,0.5)" }}
             >
               برنامج من نهج بالتعاون مع مؤسسة مسك
             </p>
             <h1
-              className="text-white tracking-tight leading-[1.05] text-8xl lg:text-9xl"
+              className="text-white tracking-tight leading-[0.95] text-8xl lg:text-9xl"
               style={{
                 fontFamily: "Cairo, sans-serif",
                 fontWeight: 700,
@@ -71,10 +71,10 @@ export default function Home() {
               }}
             >
               <span className="block">اكتشف</span>
-              <span className="block">مسارك</span>
+              <span className="block -translate-x-8 lg:-translate-x-12">مسارك</span>
             </h1>
             <p
-              className="text-white/90 text-xl lg:text-2xl font-bold mt-6 max-w-2xl leading-relaxed"
+              className="text-white/90 text-xl lg:text-2xl font-bold mt-8 max-w-2xl leading-relaxed"
               style={{ fontFamily: "Tajawal, sans-serif", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
             >
               رحلة لاكتشاف مسارك المهني مبكرًا، من التعلّم إلى التجربة الميدانية
