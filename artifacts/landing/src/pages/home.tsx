@@ -138,13 +138,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* PARTNERS CAROUSEL */}
-      <PartnersCarousel />
-
       {/* BROUGHT TO YOU BY */}
       <section
         aria-label="مقدّم لكم من"
-        className="w-full bg-[#E8DCC8] border-t border-black/5 py-14 sm:py-20"
+        className="w-full bg-[#E8DCC8] py-14 sm:py-20"
       >
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Arabic text on the left */}
@@ -175,6 +172,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* PARTNERS CAROUSEL */}
+      <PartnersCarousel />
 
       {/* 2. PROGRAM SUMMARY SECTION */}
       <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6 flex flex-col items-center">
