@@ -10,10 +10,8 @@ import heroNahj from "@/assets/hero-nahj.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
+import { ProgramRoadmap } from "@/components/program-roadmap";
 import { 
-  Compass, 
-  GraduationCap, 
-  Briefcase, 
   Cpu, 
   Stethoscope, 
   Cog, 
@@ -197,65 +195,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* 3. PROGRAM JOURNEY SECTION */}
-      <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6 bg-[#0d2547]/50 rounded-3xl mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-yellow-400">رحلة البرنامج</h2>
-        </motion.div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              num: "01",
-              title: "المرحلة الأولى — اكتشف مسارك",
-              items: ["التسجيل في المنصة", "استكشاف المحتوى التفاعلي", "الحصول على شهادة إتمام"],
-              icon: Compass
-            },
-            {
-              num: "02",
-              title: "المرحلة الثانية — البرنامج التأهيلي",
-              items: ["ورش عمل حضورية", "لقاءات مع متخصصين", "تجارب وأنشطة تفاعلية"],
-              icon: GraduationCap
-            },
-            {
-              num: "03",
-              title: "المرحلة الثالثة — البرنامج التدريبي",
-              items: ["تجربة ميدانية واقعية", "العمل في جهات مهنية", "استكشاف بيئة العمل"],
-              icon: Briefcase
-            }
-          ].map((phase, idx) => (
-            <motion.div
-              key={phase.num}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.15 }}
-              whileHover={{ y: -5 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/5 rounded-full -mr-16 -mt-16 blur-2xl pointer-events-none" />
-              <div className="flex items-center justify-between mb-6">
-                <span className="text-4xl font-black text-white/20">{phase.num}</span>
-                <phase.icon className="w-10 h-10 text-yellow-400" />
-              </div>
-              <h3 className="text-2xl font-bold mb-6 text-white">{phase.title}</h3>
-              <ul className="space-y-4">
-                {phase.items.map((item, i) => (
-                  <li key={i} className="flex items-start text-blue-100/80">
-                    <span className="w-2 h-2 rounded-full bg-yellow-400 mt-2 ml-3 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      {/* 3. PROGRAM JOURNEY ROADMAP */}
+      <ProgramRoadmap />
 
       {/* 4. PROFESSION PATHWAYS SECTION */}
       <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6">
