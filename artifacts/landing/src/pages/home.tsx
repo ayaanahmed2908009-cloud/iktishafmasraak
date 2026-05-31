@@ -5,6 +5,8 @@ import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
 import logoMisk from "@/assets/logo-misk.png";
 import logoNahj from "@/assets/logo-nahj.png";
+import heroMisk from "@/assets/hero-misk.png";
+import heroNahj from "@/assets/hero-nahj.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
@@ -138,6 +140,41 @@ export default function Home() {
 
       {/* PARTNERS CAROUSEL */}
       <PartnersCarousel />
+
+      {/* BROUGHT TO YOU BY */}
+      <section
+        aria-label="مقدّم لكم من"
+        className="w-full bg-[#E8DCC8] border-t border-black/5 py-14 sm:py-20"
+      >
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Arabic text on the left */}
+          <div dir="rtl" className="text-center md:text-right shrink-0">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1f3a5f] leading-tight">
+              مقدّم لكم من
+            </h2>
+          </div>
+
+          {/* Logos on the right — نهج first, then مسك */}
+          <div dir="rtl" className="flex items-center justify-center gap-12 sm:gap-20">
+            <div className="flex flex-col items-center gap-4">
+              <img
+                src={heroNahj}
+                alt="نهج"
+                className="h-20 sm:h-28 w-auto object-contain"
+              />
+              <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">نهج</span>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <img
+                src={heroMisk}
+                alt="مؤسسة مسك"
+                className="h-20 sm:h-28 w-auto object-contain"
+              />
+              <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">مؤسسة مسك</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 2. PROGRAM SUMMARY SECTION */}
       <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6 flex flex-col items-center">
