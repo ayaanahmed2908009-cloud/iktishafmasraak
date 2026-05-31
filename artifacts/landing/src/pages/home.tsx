@@ -36,9 +36,9 @@ export default function Home() {
     <div className="min-h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] text-white overflow-hidden font-sans" style={{ fontFamily: "Tajawal, sans-serif" }}>
       
       {/* 1. HERO SECTION */}
-      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] md:bg-white overflow-hidden shrink-0">
-        {/* ===== DESKTOP / TABLET (md+) — rounded peninsula surrounded by white ===== */}
-        <div className="hidden md:block absolute inset-6 lg:inset-10 rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
+      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] md:bg-[#E8DCC8] overflow-hidden shrink-0">
+        {/* ===== DESKTOP / TABLET (md+) — rounded peninsula surrounded by beige ===== */}
+        <div className="hidden md:block absolute inset-12 lg:inset-16 rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
           {/* Blurred backdrop to extend cover edges */}
           <img
             src={coverImage}
