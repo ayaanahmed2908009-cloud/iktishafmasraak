@@ -152,21 +152,26 @@ export default function Home() {
           </div>
 
           {/* Logos on the right — نهج first, then مسك */}
-          <div dir="rtl" className="flex items-center justify-center gap-12 sm:gap-20">
-            <div className="flex flex-col items-center gap-4">
-              <img
-                src={heroNahj}
-                alt="نهج"
-                className="h-20 sm:h-28 w-auto object-contain"
-              />
+          <div dir="rtl" className="flex items-stretch justify-center gap-6 sm:gap-10">
+            <div className="flex w-40 sm:w-52 flex-col items-center justify-between gap-4">
+              <div className="flex flex-1 items-center">
+                <img
+                  src={heroNahj}
+                  alt="نهج"
+                  className="h-16 sm:h-24 w-auto object-contain"
+                />
+              </div>
               <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">نهج</span>
             </div>
-            <div className="flex flex-col items-center gap-4">
-              <img
-                src={heroMisk}
-                alt="مؤسسة مسك"
-                className="h-20 sm:h-28 w-auto object-contain"
-              />
+            <div className="self-center h-16 sm:h-20 w-px bg-[#1f3a5f]/15" />
+            <div className="flex w-40 sm:w-52 flex-col items-center justify-between gap-4">
+              <div className="flex flex-1 items-center">
+                <img
+                  src={heroMisk}
+                  alt="مؤسسة مسك"
+                  className="h-16 sm:h-24 w-auto object-contain"
+                />
+              </div>
               <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">مؤسسة مسك</span>
             </div>
           </div>
