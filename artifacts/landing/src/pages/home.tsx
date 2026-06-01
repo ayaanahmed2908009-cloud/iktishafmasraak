@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
 import logosStrip from "@/assets/logos-strip.png";
 import titleStrip from "@/assets/title-strip.png";
@@ -126,12 +125,14 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="flex justify-center w-full"
           >
-            <Link
-              href="/survey"
+            <a
+              href={MISK_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-14 md:h-20 items-center justify-center rounded-full bg-yellow-400 px-12 md:px-20 text-xl md:text-3xl font-bold text-black shadow-[0_0_40px_-10px_rgba(250,204,21,0.5)] transition-all hover:bg-yellow-300 hover:scale-105 hover:shadow-[0_0_50px_-5px_rgba(250,204,21,0.6)] focus:outline-none focus:ring-4 focus:ring-yellow-400/50 cursor-pointer"
             >
               سجّل الآن
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
