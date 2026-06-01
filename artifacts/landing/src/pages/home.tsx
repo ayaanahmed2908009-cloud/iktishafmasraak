@@ -196,18 +196,18 @@ export default function Home() {
             className="text-center mb-14 md:mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#0a1e3a]">المسارات المهنية</h2>
-            <p className="mt-4 text-lg text-[#1f3a5f]/70">اكتشف المجالات المهنية واختر ما يناسب شغفك وطموحك</p>
+            <p className="mt-4 text-lg text-[#1f3a5f]">اكتشف المجالات المهنية واختر ما يناسب شغفك وطموحك</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { label: "التقنية والتحول الرقمي", icon: Cpu, chip: "bg-cyan-500", tint: "bg-cyan-50", border: "border-cyan-200", text: "text-cyan-900", glow: "hover:shadow-cyan-500/30" },
-              { label: "الصحة وعلوم الحياة", icon: Stethoscope, chip: "bg-emerald-500", tint: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-900", glow: "hover:shadow-emerald-500/30" },
-              { label: "الهندسة والطاقة والصناعة", icon: Cog, chip: "bg-amber-500", tint: "bg-amber-50", border: "border-amber-200", text: "text-amber-900", glow: "hover:shadow-amber-500/30" },
-              { label: "المالية وريادة الأعمال", icon: TrendingUp, chip: "bg-blue-600", tint: "bg-blue-50", border: "border-blue-200", text: "text-blue-900", glow: "hover:shadow-blue-500/30" },
-              { label: "الإعلام والصحافة", icon: Mic, chip: "bg-rose-500", tint: "bg-rose-50", border: "border-rose-200", text: "text-rose-900", glow: "hover:shadow-rose-500/30" },
-              { label: "القانون والعلاقات الدولية", icon: Scale, chip: "bg-violet-500", tint: "bg-violet-50", border: "border-violet-200", text: "text-violet-900", glow: "hover:shadow-violet-500/30" },
-              { label: "الرياضة والترفيه", icon: Trophy, chip: "bg-orange-500", tint: "bg-orange-50", border: "border-orange-200", text: "text-orange-900", glow: "hover:shadow-orange-500/30" },
+              { label: "التقنية والتحول الرقمي", icon: Cpu },
+              { label: "الصحة وعلوم الحياة", icon: Stethoscope },
+              { label: "الهندسة والطاقة والصناعة", icon: Cog },
+              { label: "المالية وريادة الأعمال", icon: TrendingUp },
+              { label: "الإعلام والصحافة", icon: Mic },
+              { label: "القانون والعلاقات الدولية", icon: Scale },
+              { label: "الرياضة والترفيه", icon: Trophy },
             ].map((pathway, idx) => (
               <motion.div
                 key={idx}
@@ -216,12 +216,12 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
                 whileHover={{ y: -4, scale: 1.03 }}
-                className={`group flex items-center gap-4 rounded-2xl border ${pathway.border} ${pathway.tint} py-4 px-5 cursor-pointer shadow-sm transition-shadow duration-300 hover:shadow-xl ${pathway.glow}`}
+                className="group flex items-center gap-4 rounded-2xl border border-[#0a1e3a]/10 bg-white py-4 px-5 cursor-pointer shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-yellow-400/25"
               >
-                <div className={`w-11 h-11 rounded-xl ${pathway.chip} flex items-center justify-center shrink-0 shadow-sm transition-transform duration-300 group-hover:scale-110`}>
-                  <pathway.icon className="w-5 h-5 text-white" strokeWidth={2.2} />
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-yellow-300 to-yellow-500 ring-1 ring-inset ring-white/30 flex items-center justify-center shrink-0 shadow-[0_6px_18px_-6px_rgba(250,204,21,0.6)] transition-transform duration-300 group-hover:scale-110">
+                  <pathway.icon className="w-5 h-5 text-[#0a1e3a]" strokeWidth={2.2} />
                 </div>
-                <span className={`text-base font-bold leading-snug ${pathway.text}`}>{pathway.label}</span>
+                <span className="text-base font-bold leading-snug text-[#0a1e3a]">{pathway.label}</span>
               </motion.div>
             ))}
           </div>
