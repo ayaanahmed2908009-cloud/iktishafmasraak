@@ -1,8 +1,9 @@
 import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
-import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
 import heroMisk from "@assets/misk_white__1780327942446.png";
 import heroNahj from "@assets/nahjremove_1780327928145.png";
+import partnerMisk from "@assets/misk_1780259646848.png";
+import partnerNahj from "@assets/nahj-نهج_1780259659377.png";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { SurveyForm } from "@/components/survey-form";
@@ -18,7 +19,6 @@ import {
   Trophy, 
   ExternalLink
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const MISK_PORTAL_URL = "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/";
 
@@ -125,38 +125,32 @@ export default function Home() {
       {/* BROUGHT TO YOU BY */}
       <section
         aria-label="مقدّم لكم من"
-        className="w-full bg-[#0A2744] py-14 sm:py-20"
+        className="w-full bg-white py-14 sm:py-20"
       >
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
           {/* Arabic text on the right */}
           <div dir="rtl" className="text-center md:text-right shrink-0">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1e3a] leading-tight">
               مقدّم لكم من
             </h2>
           </div>
 
           {/* Logos on the right — نهج first, then مسك */}
-          <div dir="rtl" className="flex items-stretch justify-center gap-6 sm:gap-10">
-            <div className="flex w-40 sm:w-52 flex-col items-center justify-between gap-4">
-              <div className="flex flex-1 items-center">
-                <img
-                  src={heroNahj}
-                  alt="نهج"
-                  className="h-16 sm:h-24 w-auto object-contain"
-                />
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-white">نهج</span>
+          <div dir="rtl" className="flex items-center justify-center gap-6 sm:gap-10">
+            <div className="flex w-40 sm:w-52 items-center justify-center">
+              <img
+                src={partnerNahj}
+                alt="نهج"
+                className="h-16 sm:h-24 w-auto object-contain"
+              />
             </div>
-            <div className="self-center h-16 sm:h-20 w-px bg-white/20" />
-            <div className="flex w-40 sm:w-52 flex-col items-center justify-between gap-4">
-              <div className="flex flex-1 items-center">
-                <img
-                  src={heroMisk}
-                  alt="مؤسسة مسك"
-                  className="h-16 sm:h-24 w-auto object-contain"
-                />
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-white">مؤسسة مسك</span>
+            <div className="self-center h-16 sm:h-20 w-px bg-[#0a1e3a]/15" />
+            <div className="flex w-40 sm:w-52 items-center justify-center">
+              <img
+                src={partnerMisk}
+                alt="مؤسسة مسك"
+                className="h-16 sm:h-24 w-auto object-contain"
+              />
             </div>
           </div>
         </div>
