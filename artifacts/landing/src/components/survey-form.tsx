@@ -15,8 +15,22 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { toast } from "sonner";
 import { Check } from "lucide-react";
+
+const GRADE_OPTIONS = [
+  "ثالث متوسط",
+  "أول ثانوي",
+  "ثاني ثانوي",
+  "ثالث ثانوي",
+];
 
 const surveySchema = z.object({
   name: z.string().min(2, { message: "الاسم مطلوب (على الأقل حرفين)" }),
@@ -168,13 +182,28 @@ export function SurveyForm({
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-[#E6D5C3] text-base">الصف</FormLabel>
-              <FormControl>
-                <Input 
-                  placeholder="أدخل صفك الدراسي" 
-                  {...field} 
-                  className="bg-black/20 border-white/10 text-white h-12 placeholder:text-white/30 focus-visible:ring-yellow-400" 
-                />
-              </FormControl>
+              <Select
+                dir="rtl"
+                value={field.value}
+                onValueChange={field.onChange}
+              >
+                <FormControl>
+                  <SelectTrigger className="bg-black/20 border-white/10 text-white h-12 data-[placeholder]:text-white/30 focus:ring-yellow-400">
+                    <SelectValue placeholder="اختر صفك الدراسي" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent dir="rtl" className="bg-[#0a1e3a] border-white/10 text-white">
+                  {GRADE_OPTIONS.map((grade) => (
+                    <SelectItem
+                      key={grade}
+                      value={grade}
+                      className="text-white focus:bg-white/10 focus:text-white"
+                    >
+                      {grade}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage className="text-red-400" />
             </FormItem>
           )}
