@@ -199,41 +199,45 @@ export default function Home() {
       <ProgramRoadmap />
 
       {/* 4. PROFESSION PATHWAYS SECTION */}
-      <section dir="rtl" className="w-full py-20 md:py-28 max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-yellow-400">المسارات المهنية</h2>
-        </motion.div>
+      <section dir="rtl" className="w-full bg-[#E8DCC8] py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-14 md:mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1e3a]">المسارات المهنية</h2>
+            <p className="mt-4 text-lg text-[#1f3a5f]/70">اكتشف المجالات المهنية واختر ما يناسب شغفك وطموحك</p>
+          </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {[
-            { label: "التقنية والتحول الرقمي", icon: Cpu },
-            { label: "الصحة وعلوم الحياة", icon: Stethoscope },
-            { label: "الهندسة والطاقة والصناعة", icon: Cog },
-            { label: "المالية وريادة الأعمال", icon: TrendingUp },
-            { label: "الإعلام والصحافة", icon: Mic },
-            { label: "القانون والعلاقات الدولية", icon: Scale },
-            { label: "الرياضة والترفيه", icon: Trophy },
-          ].map((pathway, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
-              className="flex items-center gap-4 bg-white/5 border border-white/10 rounded-full py-4 px-6 cursor-pointer transition-colors"
-            >
-              <div className="w-10 h-10 rounded-full bg-yellow-400/10 flex items-center justify-center shrink-0">
-                <pathway.icon className="w-5 h-5 text-yellow-400" />
-              </div>
-              <span className="text-lg font-medium text-blue-50">{pathway.label}</span>
-            </motion.div>
-          ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              { label: "التقنية والتحول الرقمي", icon: Cpu, chip: "bg-cyan-500", tint: "bg-cyan-50", border: "border-cyan-200", text: "text-cyan-900", glow: "hover:shadow-cyan-500/30" },
+              { label: "الصحة وعلوم الحياة", icon: Stethoscope, chip: "bg-emerald-500", tint: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-900", glow: "hover:shadow-emerald-500/30" },
+              { label: "الهندسة والطاقة والصناعة", icon: Cog, chip: "bg-amber-500", tint: "bg-amber-50", border: "border-amber-200", text: "text-amber-900", glow: "hover:shadow-amber-500/30" },
+              { label: "المالية وريادة الأعمال", icon: TrendingUp, chip: "bg-blue-600", tint: "bg-blue-50", border: "border-blue-200", text: "text-blue-900", glow: "hover:shadow-blue-500/30" },
+              { label: "الإعلام والصحافة", icon: Mic, chip: "bg-rose-500", tint: "bg-rose-50", border: "border-rose-200", text: "text-rose-900", glow: "hover:shadow-rose-500/30" },
+              { label: "القانون والعلاقات الدولية", icon: Scale, chip: "bg-violet-500", tint: "bg-violet-50", border: "border-violet-200", text: "text-violet-900", glow: "hover:shadow-violet-500/30" },
+              { label: "الرياضة والترفيه", icon: Trophy, chip: "bg-orange-500", tint: "bg-orange-50", border: "border-orange-200", text: "text-orange-900", glow: "hover:shadow-orange-500/30" },
+            ].map((pathway, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.06 }}
+                whileHover={{ y: -4, scale: 1.03 }}
+                className={`group flex items-center gap-4 rounded-2xl border ${pathway.border} ${pathway.tint} py-4 px-5 cursor-pointer shadow-sm transition-shadow duration-300 hover:shadow-xl ${pathway.glow}`}
+              >
+                <div className={`w-11 h-11 rounded-xl ${pathway.chip} flex items-center justify-center shrink-0 shadow-sm transition-transform duration-300 group-hover:scale-110`}>
+                  <pathway.icon className="w-5 h-5 text-white" strokeWidth={2.2} />
+                </div>
+                <span className={`text-base font-bold leading-snug ${pathway.text}`}>{pathway.label}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
