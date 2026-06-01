@@ -139,7 +139,7 @@ export default function Home() {
       {/* BROUGHT TO YOU BY */}
       <section
         aria-label="مقدّم لكم من"
-        className="w-full bg-[#3b5570] py-14 sm:py-20"
+        className="w-full bg-[#0D2D5E] py-14 sm:py-20"
       >
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
           {/* Arabic text on the right */}
