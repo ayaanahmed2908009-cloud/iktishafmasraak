@@ -90,8 +90,8 @@ export function ProgramRoadmap() {
           </motion.p>
         </header>
 
-        {/* ===== Desktop: winding dotted journey ===== */}
-        <div className="relative hidden min-h-[46rem] lg:block">
+        {/* ===== Winding dotted journey (all screens) ===== */}
+        <div className="relative min-h-[42rem] sm:min-h-[46rem] lg:min-h-[46rem]">
           <svg
             className="absolute inset-0 h-full w-full"
             viewBox="0 0 100 100"
@@ -115,7 +115,7 @@ export function ProgramRoadmap() {
           </svg>
 
           {PHASES.map((phase, idx) => (
-            <DesktopStep
+            <JourneyStep
               key={phase.num}
               phase={phase}
               index={idx}
@@ -123,15 +123,12 @@ export function ProgramRoadmap() {
             />
           ))}
         </div>
-
-        {/* ===== Mobile: dotted vertical journey ===== */}
-        <MobileJourney reduceMotion={!!reduceMotion} />
       </div>
     </section>
   );
 }
 
-function DesktopStep({
+function JourneyStep({
   phase,
   index,
   reduceMotion,
@@ -159,14 +156,14 @@ function DesktopStep({
       <motion.div
         variants={reduceMotion ? undefined : nodeVariants}
         initial={reduceMotion ? false : "hidden"}
-        whileInView="show"
+        whileInView={reduceMotion ? undefined : "show"}
         viewport={{ once: true, margin: "0px 0px -20% 0px" }}
         className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
         style={{ left: `${phase.x}%`, top: `${phase.y}%` }}
       >
         <span className="absolute -inset-3 -z-10 rounded-full bg-yellow-400/10 blur-md" />
-        <span className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-[#0a1e3a] shadow-[0_10px_30px_-8px_rgba(250,204,21,0.55)] ring-1 ring-inset ring-white/25">
-          <Icon className="h-7 w-7" strokeWidth={2.2} aria-hidden />
+        <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-[#0a1e3a] shadow-[0_10px_30px_-8px_rgba(250,204,21,0.55)] ring-1 ring-inset ring-white/25 sm:h-16 sm:w-16 sm:rounded-2xl">
+          <Icon className="h-6 w-6 sm:h-7 sm:w-7" strokeWidth={2.2} aria-hidden />
         </span>
         <span className="absolute -bottom-1.5 -left-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#0a1e3a] text-[11px] font-bold text-yellow-400 ring-1 ring-yellow-400/40">
           {phase.num}
@@ -179,89 +176,27 @@ function DesktopStep({
         style={{ top: `${phase.y}%` }}
       >
         <motion.div
-          initial={reduceMotion ? false : { opacity: 0, x: nodeLeft ? 36 : -36 }}
+          initial={reduceMotion ? false : { opacity: 0, x: nodeLeft ? 28 : -28 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "0px 0px -18% 0px" }}
           transition={{ duration: 0.6, ease: EASE, delay: base + 0.12 }}
-          className={`w-[40%] ${
-            nodeLeft ? "ml-auto mr-[7%] text-right" : "mr-auto ml-[7%] text-right"
+          className={`w-[50%] text-right sm:w-[44%] lg:w-[40%] ${
+            nodeLeft
+              ? "ml-auto mr-[4%] sm:mr-[7%]"
+              : "mr-auto ml-[4%] sm:ml-[7%]"
           }`}
         >
-          <span className="text-xs font-semibold tracking-[0.18em] text-yellow-400/70">
+          <span className="text-[11px] font-semibold tracking-[0.16em] text-yellow-400/70 sm:text-xs sm:tracking-[0.18em]">
             المرحلة {phase.num}
           </span>
-          <h3 className="mt-1.5 text-2xl font-bold tracking-tight text-white">
+          <h3 className="mt-1.5 text-lg font-bold tracking-tight text-white sm:text-2xl">
             {phase.title}
           </h3>
-          <p className="mt-3 text-[15px] leading-relaxed text-blue-100/65">
+          <p className="mt-2 text-[13px] leading-relaxed text-blue-100/65 sm:mt-3 sm:text-[15px]">
             {phase.desc}
           </p>
         </motion.div>
       </div>
     </>
-  );
-}
-
-function MobileJourney({ reduceMotion }: { reduceMotion: boolean }) {
-  return (
-    <ol className="relative lg:hidden">
-      {PHASES.map((phase, idx) => {
-        const Icon = phase.icon;
-        const isLast = idx === PHASES.length - 1;
-        const base = idx * 0.12;
-        return (
-          <li
-            key={phase.num}
-            className="relative grid grid-cols-[4rem_1fr] gap-x-4 pb-12 last:pb-0"
-          >
-            {/* dotted connector to next node */}
-            {!isLast && (
-              <span
-                aria-hidden
-                className="absolute right-8 top-16 -bottom-0 w-0.5 -translate-x-1/2 [background-image:repeating-linear-gradient(to_bottom,rgba(250,204,21,0.5)_0_3px,transparent_3px_11px)]"
-              />
-            )}
-
-            {/* icon marker */}
-            <motion.div
-              initial={reduceMotion ? false : { scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-              transition={{
-                type: "spring",
-                stiffness: 240,
-                damping: 18,
-                delay: base,
-              }}
-              className="relative z-10 flex h-16 w-16 items-center justify-center justify-self-center rounded-2xl bg-gradient-to-br from-yellow-300 to-yellow-500 text-[#0a1e3a] shadow-[0_10px_30px_-8px_rgba(250,204,21,0.55)] ring-1 ring-inset ring-white/25"
-            >
-              <Icon className="h-7 w-7" strokeWidth={2.2} aria-hidden />
-              <span className="absolute -bottom-1.5 -left-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#0a1e3a] text-[11px] font-bold text-yellow-400 ring-1 ring-yellow-400/40">
-                {phase.num}
-              </span>
-            </motion.div>
-
-            {/* text */}
-            <motion.div
-              initial={reduceMotion ? false : { opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "0px 0px -15% 0px" }}
-              transition={{ duration: 0.55, ease: EASE, delay: base + 0.1 }}
-              className="pt-1.5"
-            >
-              <span className="text-xs font-semibold tracking-[0.16em] text-yellow-400/70">
-                المرحلة {phase.num}
-              </span>
-              <h3 className="mt-1 text-xl font-bold tracking-tight text-white">
-                {phase.title}
-              </h3>
-              <p className="mt-2.5 text-[15px] leading-relaxed text-blue-100/65">
-                {phase.desc}
-              </p>
-            </motion.div>
-          </li>
-        );
-      })}
-    </ol>
   );
 }
