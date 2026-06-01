@@ -1,8 +1,6 @@
 import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
 import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
-import logoMisk from "@/assets/logo-misk.png";
-import logoNahj from "@/assets/logo-nahj.png";
 import heroMisk from "@assets/misk_white__1780327942446.png";
 import heroNahj from "@assets/nahjremove_1780327928145.png";
 import { motion } from "framer-motion";
@@ -104,17 +102,6 @@ export default function Home() {
             اكتشف مسارك
           </h1>
         </div>
-        {/* Logos in bottom corners */}
-        <img
-          src={logoMisk}
-          alt="Misk"
-          className="md:hidden absolute bottom-5 left-4 w-[42%] max-w-[200px] h-auto z-20 pointer-events-none drop-shadow-lg"
-        />
-        <img
-          src={logoNahj}
-          alt="NAHJ"
-          className="md:hidden absolute bottom-5 right-4 w-[42%] max-w-[200px] h-auto z-20 pointer-events-none drop-shadow-lg"
-        />
 
         {/* CTA — centered on mobile (slightly above logos), near bottom on desktop */}
         <div className="relative z-30 flex flex-1 items-end md:items-end justify-center h-[100dvh] w-full pb-32 md:pb-24 px-4">
