@@ -5,8 +5,8 @@ import titleStrip from "@/assets/title-strip.png";
 import photoOnly from "@/assets/photo-only.png";
 import logoMisk from "@/assets/logo-misk.png";
 import logoNahj from "@/assets/logo-nahj.png";
-import heroMisk from "@/assets/hero-misk.png";
-import heroNahj from "@/assets/hero-nahj.png";
+import heroMisk from "@assets/misk_white__1780327942446.png";
+import heroNahj from "@assets/nahjremove_1780327928145.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
@@ -139,12 +139,12 @@ export default function Home() {
       {/* BROUGHT TO YOU BY */}
       <section
         aria-label="مقدّم لكم من"
-        className="w-full bg-[#E8DCC8] py-14 sm:py-20"
+        className="w-full bg-[#0a1e3a] py-14 sm:py-20"
       >
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row-reverse items-center justify-between gap-12">
           {/* Arabic text on the right */}
           <div dir="rtl" className="text-center md:text-right shrink-0">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1f3a5f] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               مقدّم لكم من
             </h2>
           </div>
@@ -159,9 +159,9 @@ export default function Home() {
                   className="h-16 sm:h-24 w-auto object-contain"
                 />
               </div>
-              <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">نهج</span>
+              <span className="text-lg sm:text-xl font-bold text-white">نهج</span>
             </div>
-            <div className="self-center h-16 sm:h-20 w-px bg-[#1f3a5f]/15" />
+            <div className="self-center h-16 sm:h-20 w-px bg-white/20" />
             <div className="flex w-40 sm:w-52 flex-col items-center justify-between gap-4">
               <div className="flex flex-1 items-center">
                 <img
@@ -170,7 +170,7 @@ export default function Home() {
                   className="h-16 sm:h-24 w-auto object-contain"
                 />
               </div>
-              <span className="text-lg sm:text-xl font-bold text-[#1f3a5f]">مؤسسة مسك</span>
+              <span className="text-lg sm:text-xl font-bold text-white">مؤسسة مسك</span>
             </div>
           </div>
         </div>
