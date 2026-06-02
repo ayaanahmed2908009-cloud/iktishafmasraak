@@ -9,8 +9,8 @@ export default function SurveyPage() {
         <div className="h-3 w-full bg-yellow-400" />
         
         <div className="p-6 md:p-10">
-          <h1 className="text-3xl font-bold text-[#FEF7EB] mb-2">نموذج التسجيل</h1>
-          <p className="text-[#A89886] mb-8">يرجى تعبئة البيانات التالية للتسجيل.</p>
+          <h1 className="text-3xl font-bold text-white mb-2">نموذج التسجيل</h1>
+          <p className="text-white mb-8">يرجى تعبئة البيانات التالية للتسجيل.</p>
 
           <SurveyForm
             theme="light"

@@ -178,7 +178,7 @@ export default function Home() {
       <ProgramRoadmap />
 
       {/* 4. PROFESSION PATHWAYS SECTION */}
-      <section dir="rtl" className="w-full bg-[#E8DCC8] py-20 md:py-28">
+      <section dir="rtl" className="w-full bg-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

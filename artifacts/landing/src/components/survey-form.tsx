@@ -104,7 +104,7 @@ export function SurveyForm({
           <Check className="w-10 h-10" />
         </div>
         <h2 className="text-3xl font-bold text-white">شكراً لتسجيلك!</h2>
-        <p className="text-[#A89886] text-lg">{successMessage}</p>
+        <p className="text-white text-lg">{successMessage}</p>
         {onSuccessAction && (
           <Button
             onClick={onSuccessAction}
@@ -125,7 +125,7 @@ export function SurveyForm({
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">الاسم</FormLabel>
+              <FormLabel className="text-white text-base">الاسم</FormLabel>
               <FormControl>
                 <Input 
                   placeholder="أدخل اسمك الكامل" 
@@ -143,7 +143,7 @@ export function SurveyForm({
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">رقم الجوال</FormLabel>
+              <FormLabel className="text-white text-base">رقم الجوال</FormLabel>
               <FormControl>
                 <Input 
                   placeholder="05XXXXXXXX" 
@@ -162,7 +162,7 @@ export function SurveyForm({
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">البريد الإلكتروني</FormLabel>
+              <FormLabel className="text-white text-base">البريد الإلكتروني</FormLabel>
               <FormControl>
                 <Input 
                   placeholder="example@email.com" 
@@ -181,7 +181,7 @@ export function SurveyForm({
           name="grade"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">الصف</FormLabel>
+              <FormLabel className="text-white text-base">الصف</FormLabel>
               <Select
                 dir="rtl"
                 value={field.value}
@@ -214,7 +214,7 @@ export function SurveyForm({
           name="city"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">المدينة</FormLabel>
+              <FormLabel className="text-white text-base">المدينة</FormLabel>
               <FormControl>
                 <Input 
                   placeholder="أدخل مدينتك" 
@@ -232,7 +232,7 @@ export function SurveyForm({
           name="school"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-[#E6D5C3] text-base">المدرسة</FormLabel>
+              <FormLabel className="text-white text-base">المدرسة</FormLabel>
               <FormControl>
                 <Input 
                   placeholder="أدخل اسم مدرستك" 
