@@ -1,0 +1,1 @@
+- [Deployment build scope & gotchas](deploy-build.md) — deploy runs per-artifact `[services.production.build]`, not root build; mockup-sandbox PORT failure is a red herring; Express + noImplicitReturns TS7030 fix.

@@ -136,11 +136,11 @@ export default function Home() {
 
           {/* Logos on the right — نهج first, then مسك */}
           <div dir="rtl" className="flex items-center justify-center gap-6 sm:gap-10">
-            <div className="flex w-40 sm:w-52 items-center justify-center">
+            <div className="flex w-48 sm:w-64 items-center justify-center">
               <img
                 src={partnerNahj}
                 alt="نهج"
-                className="h-16 sm:h-24 w-auto object-contain"
+                className="h-24 sm:h-32 w-auto object-contain"
               />
             </div>
             <div className="self-center h-16 sm:h-20 w-px bg-[#0a1e3a]/15" />

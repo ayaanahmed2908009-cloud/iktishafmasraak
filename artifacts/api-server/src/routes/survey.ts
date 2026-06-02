@@ -8,7 +8,8 @@ const router: IRouter = Router();
 router.post("/survey", async (req, res) => {
   const parsed = SubmitSurveyBody.safeParse(req.body);
   if (!parsed.success) {
-    return res.status(400).json({ error: "Invalid input" });
+    res.status(400).json({ error: "Invalid input" });
+    return;
   }
   const [row] = await db
     .insert(surveyResponsesTable)
@@ -30,7 +31,8 @@ router.get("/admin/responses", async (req, res) => {
   const provided = String(req.query.password ?? "");
   const expected = process.env.ADMIN_PASSWORD;
   if (!expected || provided !== expected) {
-    return res.status(401).json({ error: "Unauthorized" });
+    res.status(401).json({ error: "Unauthorized" });
+    return;
   }
   const rows = await db
     .select()
