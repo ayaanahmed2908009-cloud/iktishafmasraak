@@ -21,13 +21,13 @@ export function PartnersCarousel() {
     <section
       dir="rtl"
       aria-label="شركاؤنا"
-      className="w-full bg-[#E8DCC8] py-14 sm:py-20 overflow-hidden"
+      className="w-full bg-white py-14 sm:py-20 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 mb-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#1f3a5f]">
           شركاؤنا
         </h2>
-        <p className="mt-2 text-base sm:text-lg text-[#7a6f5a]">
+        <p className="mt-2 text-base sm:text-lg text-[#1f3a5f]/70">
           نفخر بالتعاون مع نخبة من الجهات الرائدة الداعمة لرسالتنا
         </p>
       </div>
@@ -58,8 +58,8 @@ export function PartnersCarousel() {
           ))}
         </div>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-[#E8DCC8] to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[#E8DCC8] to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-10" />
       </div>
     </section>
   );

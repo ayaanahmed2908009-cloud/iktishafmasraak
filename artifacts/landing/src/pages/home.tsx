@@ -1,7 +1,5 @@
 import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
 import photoOnly from "@/assets/photo-only.png";
-import heroMisk from "@assets/misk_white__1780327942446.png";
-import heroNahj from "@assets/nahjremove_1780327928145.png";
 import partnerMisk from "@assets/misk_1780259646848.png";
 import partnerNahj from "@assets/nahj-نهج_1780259659377.png";
 import { motion } from "framer-motion";
@@ -277,22 +275,22 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer dir="rtl" className="w-full py-12 border-t border-white/10 bg-black/40 text-center mt-auto">
+      <footer dir="rtl" className="w-full py-12 border-t border-[#0a1e3a]/10 bg-white text-center mt-auto">
         <div className="max-w-6xl mx-auto px-6 flex flex-col items-center gap-8">
           <div className="flex items-center justify-center gap-8 sm:gap-12">
             <img
-              src={heroNahj}
+              src={partnerNahj}
               alt="نهج"
               className="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
-            <span className="h-12 md:h-14 w-px bg-white/15" />
+            <span className="h-12 md:h-14 w-px bg-[#0a1e3a]/15" />
             <img
-              src={heroMisk}
+              src={partnerMisk}
               alt="مؤسسة مسك"
               className="h-12 md:h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
-          <p className="text-blue-200/60 text-sm">
+          <p className="text-[#0a1e3a]/60 text-sm">
             جميع الحقوق محفوظة &copy; {new Date().getFullYear()} برنامج اكتشف مسارك
           </p>
         </div>
