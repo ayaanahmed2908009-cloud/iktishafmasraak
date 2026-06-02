@@ -3,7 +3,6 @@ import photoOnly from "@/assets/photo-only.png";
 import partnerMisk from "@assets/misk_1780259646848.png";
 import partnerNahj from "@assets/nahj-نهج_1780259659377.png";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
 import { ProgramRoadmap } from "@/components/program-roadmap";
@@ -32,8 +31,8 @@ export default function Home() {
     <div className="min-h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] text-white overflow-hidden font-sans" style={{ fontFamily: "Tajawal, sans-serif" }}>
       
       {/* 1. HERO SECTION */}
-      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] md:bg-[#E8DCC8] overflow-hidden shrink-0">
-        {/* ===== DESKTOP / TABLET (md+) — rounded peninsula surrounded by beige ===== */}
+      <div className="relative h-[100dvh] w-full flex flex-col items-center bg-white overflow-hidden shrink-0">
+        {/* ===== DESKTOP / TABLET (md+) — rounded peninsula surrounded by white ===== */}
         <div className="hidden md:block absolute inset-12 lg:inset-16 rounded-[3rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
           {/* Blurred backdrop to extend cover edges */}
           <img
@@ -110,12 +109,14 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="flex justify-center w-full"
           >
-            <Link
-              href="/survey"
+            <a
+              href={MISK_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-14 md:h-20 items-center justify-center rounded-full bg-yellow-400 px-12 md:px-20 text-xl md:text-3xl font-bold text-black shadow-[0_0_40px_-10px_rgba(250,204,21,0.5)] transition-all hover:bg-yellow-300 hover:scale-105 hover:shadow-[0_0_50px_-5px_rgba(250,204,21,0.6)] focus:outline-none focus:ring-4 focus:ring-yellow-400/50 cursor-pointer"
             >
               سجّل الآن
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
