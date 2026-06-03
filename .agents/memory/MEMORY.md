@@ -1,1 +1,2 @@
 - [Deployment build scope & gotchas](deploy-build.md) — deploy runs per-artifact `[services.production.build]`, not root build; mockup-sandbox PORT failure is a red herring; Express + noImplicitReturns TS7030 fix.
+- [Landing partner logo sizing](landing-logo-assets.md) — logo assets have transparent padding so equal CSS height ≠ equal visual size; trim to alpha bbox (PIL getbbox) before sizing.
