@@ -1,7 +1,7 @@
 import coverImage from "@assets/Screenshot_1447-12-14_at_11.11.45_pm_1780258333952.png";
 import photoOnly from "@/assets/photo-only.png";
 import partnerMisk from "@assets/misk_1780259646848.png";
-import partnerNahj from "@assets/nahj-نهج_1780259659377.png";
+import partnerNahj from "@assets/nahj-trimmed_1780330000000.png";
 import { motion } from "framer-motion";
 import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
@@ -136,15 +136,15 @@ export default function Home() {
 
           {/* Logos on the right — نهج first, then مسك */}
           <div dir="rtl" className="flex items-center justify-center gap-6 sm:gap-10">
-            <div className="flex w-48 sm:w-64 items-center justify-center">
+            <div className="flex w-44 sm:w-56 items-center justify-center">
               <img
                 src={partnerNahj}
                 alt="نهج"
-                className="h-24 sm:h-32 w-auto object-contain"
+                className="h-16 sm:h-24 w-auto object-contain"
               />
             </div>
             <div className="self-center h-16 sm:h-20 w-px bg-[#0a1e3a]/15" />
-            <div className="flex w-40 sm:w-52 items-center justify-center">
+            <div className="flex w-44 sm:w-56 items-center justify-center">
               <img
                 src={partnerMisk}
                 alt="مؤسسة مسك"
