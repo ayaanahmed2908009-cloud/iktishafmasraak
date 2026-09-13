@@ -3,7 +3,6 @@ import photoOnly from "@/assets/photo-only.png";
 import partnerMisk from "@assets/misk_1780259646848.png";
 import partnerNahj from "@assets/nahj-trimmed_1780330000000.png";
 import { motion } from "framer-motion";
-import { SurveyForm } from "@/components/survey-form";
 import { PartnersCarousel } from "@/components/partners-carousel";
 import { ProgramRoadmap } from "@/components/program-roadmap";
 import { 
@@ -20,13 +19,6 @@ import {
 const MISK_PORTAL_URL = "https://hub.misk.org.sa/ar/programs/skills/discover-your-path/";
 
 export default function Home() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-[100dvh] w-full flex flex-col items-center bg-[#0a1e3a] text-white overflow-hidden font-sans" style={{ fontFamily: "Tajawal, sans-serif" }}>
       
@@ -220,36 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. QUESTIONARY SECTION */}
-      <section id="questionary" dir="rtl" className="w-full py-20 md:py-28 max-w-3xl mx-auto px-6 scroll-mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">استبيان سريع</h2>
-          <p className="text-xl text-blue-200">ساعدنا نتعرف عليك في أقل من دقيقة</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-md"
-        >
-          <SurveyForm 
-            theme="dark"
-            successMessage="لقد تم استلام بياناتك بنجاح. أكمل رحلتك بالأسفل."
-            successButtonLabel="المتابعة للتسجيل"
-            onSuccessAction={() => scrollToSection('apply')}
-          />
-        </motion.div>
-      </section>
-
-      {/* 6. FINAL CTA SECTION */}
+      {/* 5. FINAL CTA SECTION */}
       <section id="apply" dir="rtl" className="w-full py-24 md:py-32 max-w-4xl mx-auto px-6 text-center scroll-mt-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
