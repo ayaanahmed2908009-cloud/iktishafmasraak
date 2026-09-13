@@ -1,2 +1,5 @@
 [build]
 builder = "RAILPACK"
+
+[runtime.pnpm]
+version = "9"
